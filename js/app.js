@@ -34,7 +34,7 @@ const displaySearchResult = books => {
             if (book.cover_i !== undefined) {
                 coverUrl = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
             } else {
-                coverUrl = 'img/NoImageFound.png';
+                coverUrl = 'images/NoImageFound.png';
             }
             const div = document.createElement('div');
             div.classList.add('col');
