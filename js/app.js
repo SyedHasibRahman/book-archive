@@ -1,14 +1,9 @@
-// Spiner function 
-const toggleSpinner = displayStyle => {
-    document.getElementById('spinner').style.display = displayStyle;
-}
 const searchBook = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     searchField.value = '';
 
-    toggleSpinner('block');
-    const url = `http://openlibrary.org/search.json?q=${searchText}`;
+    const url = `https://openlibrary.org/search.json?q=${searchText}`;
     fetch(url)
         .then(res => res.json())
         .then(data => displaySearchResult(data.docs));
@@ -45,7 +40,7 @@ const displaySearchResult = books => {
                     <div class="card-body">
                     <h3 class="card-title">${book.title}</h3>
                     <p class="card-text fw-bold">Author: <span class="text-success"> ${book.author_name} </span></p>
-                    <p class="card-text"> Publisher: ${book?.publisher} </p>
+                    <p class="card-text"> Publisher: ${book?.publisher?.[0]} </p> 
                     <p class="card-text"><small class="text-muted"> First publishing year: ${book.first_publish_year}</small></p>
                   </div>
                 </div>
