@@ -15,7 +15,6 @@ const searchBook = () => {
 
 }
 
-
 const displaySearchResult = books => {
     // Count total
     const total = books.length;
