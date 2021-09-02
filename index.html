@@ -9,9 +9,13 @@
     <!-- bootstrap css  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-info pt-5">
+    <!-- show spinner  -->
+
     <h1 class="text-center text-white">Search! Your Favorite Book. </h1>
     <!-- book search area  -->
     <div class="input-group mb-3 w-50 mx-auto p-5">
@@ -29,7 +33,9 @@
     <!-- Single book details  -->
     <!-- book search results start -->
     <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 container mx-auto">
-
+        <div id="spinner" class="spinner-border text-success p-5 mx-auto text-center" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
     </div>
     <!-- book search results end -->
 
